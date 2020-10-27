@@ -1,0 +1,40 @@
+
+/* Use same font for all text*/
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/* JZ: Not sure if this works ... trying to have a fixed navbar*/
+.topnav {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #5F5F5F;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #C5C5C5;
+  color: black;
+}
+
+/* Hardcoded line height for header */
+.header{
+  line-height:4;
+}

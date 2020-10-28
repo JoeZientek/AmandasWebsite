@@ -7,11 +7,17 @@
 
 /* JZ: Not sure if this works ... trying to have a fixed navbar*/
 .topnav {
+  background-color: white;
+  opacity: 95%;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  right: 20%;
+  /*right: 20%;*/
+}
+
+.links {
+  margin-right: 20%;
 }
 
 /* Style the links inside the navigation bar */
@@ -35,8 +41,14 @@
   color: black;
 }
 
-.container{
+/* One off hr styling */ 
+.hrNav {
   margin-top:50px;
+  margin-bottom:-1;
+}
+
+.container{
+  margin-top:60px;
   margin-bottom:0px;
   margin-left:20%;
   margin-right:20%;

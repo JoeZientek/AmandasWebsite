@@ -1,52 +1,7 @@
-
-/* Use same font for all text*/
+/* Use same font for all text */
 * {
   font-family: "Courier New", Courier, monospace;
 }
-
-
-/* JZ: Not sure if this works ... trying to have a fixed navbar*/
-.topnav {
-  background-color: white;
-  opacity: 95%;
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  /*right: 20%;*/
-}
-
-.links {
-  margin-right: 20%;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: right;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: #5F5F5F;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #C5C5C5;
-  color: black;
-}
-
-/* One off hr styling */ 
-.hrNav {
-  margin-top:50px;
-  margin-bottom:-1;
-}
-
 
 /* Set height of body and the document to 100% */
 body, html {
@@ -55,20 +10,32 @@ body, html {
   font-family: Arial;
 }
 
-.name {
-  margin-top:80px;
-  margin-bottom:0px;
-  margin-left:20%;
-  margin-right:20%;
+/* Style tab links */
+.tablink {
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  font-size: 16px;
+  float: right;
 }
 
-.container{
-  margin-top:20px;
-  margin-bottom:0px;
-  margin-left:20%;
-  margin-right:20%;
+.links {
+  position: fixed;
+  top: 0;
+  right: 20%;
+  z-index: 999;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  opacity: 95%;
 }
 
-h1, h2, p{
-margin: 0;
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
 }

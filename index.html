@@ -1,85 +1,49 @@
 <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
-<!-- Top Bar Navigation -->
-<head>
 
-  <div class="topnav">
-    <div class="links">
-      <a href="#contact">contact</a>
-      <a href="#photography">photography</a>
-      <a href="#projects">projects</a>
-      <a class="active" href="#about">about</a>
-    </div>
-    
-    <hr class="hrNav">
-  </div>
-
-</head>
-
-<body>
-
-  <div class="name">
-    <h1> Albert Einstein </h1>
-  </div>
-  
-
-  <div class="container">
-    <p style = "float:right">
-      <img src="./resources/images/prof_pic.jpg" alt="pretty face" width="260" height = "346">
-    </p>
-
-    <p style="margin-right:20%;">
-      This is going to be a paragraph explaining what you do and what 
-      your interests are. And about all the things that make you awesome.
-    </p>
-
+<div class="links">
+  <button class="tablink" onclick="openPage('Home', this, '#C5C5C5')">Home</button>
+  <button class="tablink" onclick="openPage('News', this, '#C5C5C5')" id="defaultOpen">News</button>
+  <button class="tablink" onclick="openPage('Contact', this, '#C5C5C5')">Contact</button>
+  <button class="tablink" onclick="openPage('About', this, '#C5C5C5')">About</button>
 </div>
-
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
+  
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
   <p>Home is where the heart is..</p>
 </div>
-
+  
 <div id="News" class="tabcontent">
   <h3>News</h3>
   <p>Some news this fine day!</p> 
 </div>
-
+  
 <div id="Contact" class="tabcontent">
   <h3>Contact</h3>
   <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
-
+  
 <div id="About" class="tabcontent">
   <h3>About</h3>
   <p>Who we are and what we do.</p>
 </div>
-
+  
 <script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
   }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
 </script>
-
-</body>
-
-

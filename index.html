@@ -19,27 +19,66 @@
 
 <body>
 
+  <div class="name">
+    <h1> Albert Einstein </h1>
+  </div>
+  
+
   <div class="container">
     <p style = "float:right">
       <img src="./resources/images/prof_pic.jpg" alt="pretty face" width="260" height = "346">
     </p>
-   
-    <div class="head">
-        <h1>Your Name</h1>
-    </div>
 
-    <div class="content">
-        <p>
-          This is going to be a paragraph explaining what you do and what 
-          your interests are. And about all the things that make you awesome.
-          Amanda is a PhD student at the University of Northern Colorado (UNC) 
-          studying population dynamics in Rick Adams' lab.
+    <p style="margin-right:20%;">
+      This is going to be a paragraph explaining what you do and what 
+      your interests are. And about all the things that make you awesome.
+    </p>
 
-          She earned her bachelors degree at Rutgers University, where she met the
-          coolest guy around.
-        </p>
-    </div>
 </div>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 
 </body>
 

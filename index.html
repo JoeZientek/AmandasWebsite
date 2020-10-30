@@ -3,30 +3,56 @@
 
 
 <div class="links">
-  <button class="tablink" onclick="openPage('Home', this, '#C5C5C5')">Home</button>
-  <button class="tablink" onclick="openPage('News', this, '#C5C5C5')" id="defaultOpen">News</button>
-  <button class="tablink" onclick="openPage('Contact', this, '#C5C5C5')">Contact</button>
-  <button class="tablink" onclick="openPage('About', this, '#C5C5C5')">About</button>
+  <button class="tablink" onclick="openPage('photography', this, '#C5C5C5')">photography</button>
+  <button class="tablink" onclick="openPage('teaching', this, '#C5C5C5')">teaching</button>
+  <button class="tablink" onclick="openPage('research', this, '#C5C5C5')">research</button>
+  <button class="tablink" onclick="openPage('home', this, '#C5C5C5')" id="defaultOpen">home</button>
 </div>
   
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+<div id="home" class="tabcontent">
+  <h1>Amanda Bevan</h1>
+
+  <p class="profilePicture">
+    <img src="./resources/images/prof_pic.jpg" alt="pretty face" width="260" height = "346">
+  </p>
+  
+  <p>
+    This is going to be a paragraph explaining what you do and what 
+    your interests are. And about all the things that make you awesome.
+  </p>
+
+  <p>
+    Maybe you want to talk about the general things you are interested in, or you
+    could talk about your amazing parter.
+  </p>
+
+</div>
+
+<div id="research" class="tabcontent">
+  <h3>Community ecology</h3>
+  <p>
+    I am interested in the relationships between bats, insects, and their forest
+    habitats. Blah, blah, blah.
+  </p>
+
+  <h3>Bats</h3>
+  <p style = "float:left">
+    <img src="./resources/images/bigEarBat.jpeg" alt="pretty face" width="260" height = "346">
+  </p>
+
+  <p>
+    I like bats and you should too!
+  </p>
+</div>
+
+<div id="teaching" class="tabcontent">
+  <h3>Anatomy 112</h3>
+  <p>I am the lab coordinator for anatomy 112. I design and teach labs...</p> 
 </div>
   
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
-  
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-  
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
+<div id="photography" class="tabcontent">
+  <h3>My photos</h3>
+  <p>I like taking pictures. Here are a few!</p>
 </div>
   
 <script>

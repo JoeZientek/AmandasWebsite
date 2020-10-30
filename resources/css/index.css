@@ -45,4 +45,11 @@ body, html {
 .profilePicture {
   float: right;
   padding-left: 2%;
+  display: inline;
+  vertical-align: middle;
+}
+
+.leftPicture {
+  float: left;
+  padding-right: 2%;
 }

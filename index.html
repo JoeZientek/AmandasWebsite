@@ -1,85 +1,84 @@
 <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
-<!-- Top Bar Navigation -->
-<head>
 
-  <div class="topnav">
-    <div class="links">
-      <a href="#contact">contact</a>
-      <a href="#photography">photography</a>
-      <a href="#projects">projects</a>
-      <a class="active" href="#about">about</a>
-    </div>
-    
-    <hr class="hrNav">
-  </div>
-
-</head>
-
-<body>
-
-  <div class="name">
-    <h1> Albert Einstein </h1>
-  </div>
+<div class="links">
+  <button class="tablink" onclick="openPage('photography', this, '#C5C5C5')">photography</button>
+  <button class="tablink" onclick="openPage('teaching', this, '#C5C5C5')">teaching</button>
+  <button class="tablink" onclick="openPage('research', this, '#C5C5C5')">research</button>
+  <button class="tablink" onclick="openPage('home', this, '#C5C5C5')" id="defaultOpen">home</button>
+</div>
   
+<div id="home" class="tabcontent">
+  <h1>Amanda Bevan</h1>
 
-  <div class="container">
-    <p style = "float:right">
-      <img src="./resources/images/prof_pic.jpg" alt="pretty face" width="260" height = "346">
-    </p>
-
-    <p style="margin-right:20%;">
+  <div style="text-align: left">
+    <img class="profilePicture" src="./resources/images/prof_pic.jpg" alt="pretty face" width="260" height = "346">
+    <span style="vertical-align:middle">
       This is going to be a paragraph explaining what you do and what 
       your interests are. And about all the things that make you awesome.
+    </span>
+    <p>
+      Maybe you want to talk about the general things you are interested in, or you 
+      could talk about your amazing parter.
     </p>
 
+    <p>
+      <a href="./resources/pdfs/ABtest.pdf"> My CV</a>
+    </p>
+    
+    <p>
+      <a href="https://scholar.google.com/citations?user=Er1BLZEAAAAJ&hl=en&oi=ao"> My Google Scholar Site</a>
+    </p>
+    
+  </div>
+
 </div>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<div id="research" class="tabcontent">
+  <h3>Community ecology</h3>
+  <p>
+    I am interested in the relationships between bats, insects, and their forest
+    habitats. Blah, blah, blah.
+  </p>
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
+  <h3>Bats</h3>
+  <div style="text-align: left">
+    <img class="leftPicture" src="./resources/images/bigEarBat.jpeg" alt="batty" width="260" height = "346">
+    <span style="vertical-align:middle">
+      I like bats, and you should too!
+    </span>
+    <p>
+      Bats are cool for all these reasons
+    </p>
+  </div>
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
+<div id="teaching" class="tabcontent">
+  <h3>Anatomy 112</h3>
+  <p>I am the lab coordinator for anatomy 112. I design and teach labs...</p> 
 </div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
+  
+<div id="photography" class="tabcontent">
+  <h3>My photos</h3>
+  <p>I like taking pictures. Here are a few!</p>
 </div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
-
+  
 <script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
   }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
 </script>
-
-</body>
-
-

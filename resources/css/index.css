@@ -42,6 +42,11 @@ body, html {
   margin-left: 20%;
 }
 
+.tabmargins10 {
+  margin-right: -15%;
+  margin-left: -15%;
+}
+
 .profilePicture {
   float: right;
   padding-left: 2%;
@@ -135,6 +140,6 @@ body, html {
   }
 }
 
-.align-center {
+.centerPhotos {
   text-align: center; margin: auto;
 }

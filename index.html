@@ -64,18 +64,24 @@
   <h3>My photos</h3>
   <p>I like taking pictures. Here are a few!</p>
 
-  <img id="photo1" src="./resources/images/snowyOwl.jpg" alt="snowy" style="width:100%;max-width:300px">
-  <div id="myModal1" class="modal">
+  <div class="align-center">
+    <img class = "myImages" id="myImg" src="./resources/images/snowyOwl.jpg" alt="snowyOwl" style="width:100%;max-width:300px">
+    <img class = "myImages" id="myImg" src="./resources/images/snowyOwl2.jpg" alt="snowyOwl2" style="width:100%;max-width:300px">
+  </div>
+    
+  <img class = "myImages" id="myImg" src="./resources/images/wildflowers.jpeg" alt="wildflowers" style="width:100%;max-width:300px">
+  <img class = "myImages" id="myImg" src="./resources/images/nokhuCrags.jpeg" alt="nokhuCrags" style="width:100%;max-width:300px">
+    
+  <img class = "myImages" id="myImg" src="./resources/images/frenchAlps.jpeg" alt="frenchAlps" style="width:100%;max-width:300px">
+  <img class = "myImages" id="myImg" src="./resources/images/frenchAlps2.jpeg" alt="frenchAlps2" style="width:100%;max-width:300px">
+  
+  <img class = "myImages" id="myImg" src="./resources/images/medBow.jpeg" alt="medBow" style="width:100%;max-width:300px">
+  <img class = "myImages" id="myImg" src="./resources/images/medBowPeak.jpeg" alt="medBowPeak" style="width:100%;max-width:300px">
+
+  <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">
-    <div id="caption1"></div>
-  </div>
-
-  <img id="photo2" src="./resources/images/snowyOwl2.jpg" alt="snowy2" style="width:100%;max-width:300px">
-  <div id="myModal2" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img02">
-    <div id="caption2"></div>
+    <div id="caption"></div>
   </div>
 
 </div>
@@ -112,48 +118,28 @@
 
 <!-- Script for photo modal 1 -->
 <script>
-  // Get the modal
-  var modal = document.getElementById("myModal1");
-  
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById("photo1");
+  // create references to the modal...
+  var modal = document.getElementById('myModal');
+  // to all images -- note I'm using a class!
+  var images = document.getElementsByClassName('myImages');
+  // the image in the modal
   var modalImg = document.getElementById("img01");
+  // and the caption in the modal
   var captionText = document.getElementById("caption");
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+  
+  // Go through all of the images with our custom class
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+    // and attach our click listener for this image.
+    img.onclick = function(evt) {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
   }
   
-  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() { 
+  span.onclick = function() {
     modal.style.display = "none";
   }
-  </script>
-
-  <!-- Script for photo modal 2 -->
-<script>
-  // Get the modal
-  var modal = document.getElementById("myModal2");
-  
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById("photo2");
-  var modalImg = document.getElementById("img02");
-  var captionText = document.getElementById("caption");
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
-  
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-  
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() { 
-    modal.style.display = "none";
-  }
-  </script>
+</script>

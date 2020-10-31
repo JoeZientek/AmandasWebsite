@@ -3,6 +3,19 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+/* Hardcoded box at top of page */
+.hardBox {
+  position: fixed;
+  top:0;
+  background-color: white;
+  overflow: hidden;
+  opacity: 95%;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+}
+
 /* Set height of body and the document to 100% */
 body, html {
   height: 100%;
@@ -19,6 +32,7 @@ body, html {
   padding: 14px 16px;
   font-size: 16px;
   float: right;
+  height: 50px;
 }
 
 .links {
@@ -67,6 +81,10 @@ body, html {
 }
 
 #myImg:hover {
+  opacity: 0.7;
+}
+
+#instaLogo:hover {
   opacity: 0.7;
 }
 

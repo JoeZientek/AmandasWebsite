@@ -167,3 +167,15 @@ body, html {
   grid-template-rows: auto auto auto auto;
   gap: 10px;
 }
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,6 +1,6 @@
 /* Use same font for all text */
 * {
-  font-family: "Courier New", Courier, monospace;
+  font-family: Calibri, sans-serif, monospace;
 }
 
 /* Hardcoded box at top of page */
@@ -164,7 +164,7 @@ body, html {
 
 .grid-container {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   gap: 10px;
 }
 
